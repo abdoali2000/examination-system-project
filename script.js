@@ -12,12 +12,19 @@ errorBox.className = "errorMessages";
 const genderDiv = document.querySelector(".gender-options");
 const languageDiv = document.querySelector(".language-options");
 
+// Check if user has registered or not
+if (localStorage.getItem("isRegistered") === "true") {
+
+    // Replace to clear history and prevent navigation
+    location.replace("signin.html"); 
+}
+
 function errorHandle(event) {
   event.preventDefault();
 
   let hasError = false;
 
-  // --- First Name Validation ---
+  // First Name Validation 
   const firstNameValue = firstNameField.value.trim();
   const oldFirstErrorEmpty = document.getElementById("firstName-error-empty");
   const oldFirstErrorAlpha = document.getElementById("firstName-error-alpha");
@@ -44,7 +51,7 @@ function errorHandle(event) {
     firstNameField.insertAdjacentElement("afterend", errorClone);
   }
 
-  // --- Last Name Validation ---
+  // Last Name Validation
   const lastNameValue = lastNameField.value.trim();
   const oldLastErrorEmpty = document.getElementById("lastName-error-empty");
   const oldLastErrorAlpha = document.getElementById("lastName-error-alpha");
@@ -144,7 +151,15 @@ if (reEnterPasswordValue !== passwordValue && reEnterPasswordValue.length > 0) {
 
   // Success Msg
   if (!hasError) {
-    location.assign("success.html");
+
+    // Storing user's data to be compared in sign in page
+    localStorage.setItem("userEmail", emailField.value.trim());
+    localStorage.setItem("userPassword", passwordField.value.trim());
+
+    // Flag for prevent navigation to this page again
+    localStorage.setItem("isRegistered", "true");
+
+    location.assign("signin.html");
   }
 }
 
