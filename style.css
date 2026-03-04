@@ -81,15 +81,9 @@ button:active {
     transform: scale(0.95); /* Shrink the button slightly when clicked */
 }
 
-#errorMessages {
+.errorMessages {
     margin-top: 15px;
     color: #e74c3c;
     font-size: 14px;
     font-weight: bold;
-    background-color: #fceae9; 
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #e74c3c;
-    display: none; 
-    text-align: center;
 }

@@ -8,16 +8,24 @@
 </head>
 <body>
     <div class="form-container">
-        <h1>Please Sign in to start your Exam</h1>
-        <form id="loginForm" novalidate> <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required>
+        <h1>Pleas Sign in to start your Exam</h1>
+        <form id="registrationForm" novalidate>
+          
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
 
-    <button type="submit" id="login-btn">Sign in</button> </form>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-<div id="errorMessages"></div>
-<script src="signin.js"></script>
+        
+
+            <button type="submit" id="register-btn">Sing in</button>
+        </form>
+        
+        <div id="errorMessages"></div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
