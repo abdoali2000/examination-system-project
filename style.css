@@ -51,6 +51,13 @@ input[type="password"]:focus {
     box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
 }
 
+.gender-options,
+.language-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
 button {
     width: 100%;
     padding: 12px;

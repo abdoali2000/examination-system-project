@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Pleas Sign in to start your Exam</h1>
+        <form id="registrationForm" novalidate>
+          
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+        
+
+            <button type="submit" id="register-btn">Sing in</button>
+        </form>
+        
+        <div id="errorMessages"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
